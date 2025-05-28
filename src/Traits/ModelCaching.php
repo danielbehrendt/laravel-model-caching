@@ -10,7 +10,7 @@ use Illuminate\Support\Carbon;
 
 trait ModelCaching
 {
-    public function __get($key)
+    public function __get($key): mixed
     {
         if ($key === "cachePrefix") {
             return $this->cachePrefix
